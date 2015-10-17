@@ -36,11 +36,30 @@ namespace MathematicsAssistant.GUI.ViewModels
             }
         }
 
+        #region Properties
+
+        private TabViewModelBase m_SelectedTab;
+        public TabViewModelBase SelectedTab
+        {
+            get { return m_SelectedTab; }
+            set
+            {
+                if (m_SelectedTab != value)
+                {
+                    m_SelectedTab = value;
+                    onPropertyChanged("SelectedTab");
+                }
+            }
+        }
+
+        #endregion
+
         #region Methods
 
         private void AddTab(TabViewModelBase tab)
         {
             m_tabs.Add(tab);
+            SelectedTab = tab;
         }
 
         #endregion

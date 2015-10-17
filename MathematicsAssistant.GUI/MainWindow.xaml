@@ -21,7 +21,7 @@
                 <MenuItem Header="Triangle Calculation" Command="{Binding Path=OpenTriangleCalculationTabCommand}"/>
             </MenuItem>
         </Menu>
-        <TabControl Grid.Row="1" ItemsSource="{Binding Path=Tabs}">
+        <TabControl Grid.Row="1" ItemsSource="{Binding Path=Tabs}" SelectedItem="{Binding Path=SelectedTab}">
             <TabControl.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
