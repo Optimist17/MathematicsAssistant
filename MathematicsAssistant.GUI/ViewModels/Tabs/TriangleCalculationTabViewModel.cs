@@ -14,6 +14,7 @@ namespace MathematicsAssistant.GUI.ViewModels
 
         public TriangleViewModel Triangle { get; private set; }
 
+        #region Commands
         public ICommand CalculateCommand { get; private set; }
         private void onCalculateExecuted(Object parameter)
         {
@@ -33,13 +34,15 @@ namespace MathematicsAssistant.GUI.ViewModels
             Triangle.SideB = triangle.SideB;
             Triangle.SideC = triangle.SideC;
         }
-        
+        #endregion
 
+        #region Constructor
         public TriangleCalculationTabViewModel()
         {
             Triangle = new TriangleViewModel();
             base.Name = "TriangleCalculation";
             CalculateCommand = new RelayCommand(onCalculateExecuted);
         }
+        #endregion
     }
 }

@@ -12,5 +12,8 @@
         <DataTemplate DataType="{x:Type vm:MainTabViewModel}">
             <view:MainTabView/>
         </DataTemplate>
+        <DataTemplate DataType="{x:Type vm:MainCalculatorTabViewModel}">
+            <view:MainCalculatorTabView/>
+        </DataTemplate>
     </Application.Resources>
 </Application>

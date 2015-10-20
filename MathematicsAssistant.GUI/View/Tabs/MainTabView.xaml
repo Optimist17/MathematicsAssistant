@@ -21,9 +21,9 @@
             <Button Content="Triangle Calculation" Command="{Binding Path=CalculateTriangleCommand}" Margin="5,5,2.5,2.5" ToolTip="Calculate a Triangle"/>
         </DockPanel>
         <DockPanel Grid.Column="1" Grid.Row="0">
-            <Button Margin="2.5,5,5,2.5">
+            <Button Margin="2.5,5,5,2.5" Command="{Binding Path=MainCalcCommand}">
                 <StackPanel>
-                    <TextBlock Text="Quatrangle Calculation" HorizontalAlignment="Center"/>
+                    <TextBlock Text="Main Calculation" HorizontalAlignment="Center"/>
                     <TextBlock Text="(work in progress)" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>

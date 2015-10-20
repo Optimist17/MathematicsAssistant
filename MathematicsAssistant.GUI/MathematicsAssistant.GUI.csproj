@@ -67,8 +67,12 @@
     <Compile Include="ViewModels\Dialogs\QuestionDialogViewModel.cs" />
     <Compile Include="ViewModels\Other\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\Other\TriangleViewModel.cs" />
+    <Compile Include="ViewModels\Tabs\MainCalculatorTabViewModel.cs" />
     <Compile Include="ViewModels\Tabs\MainTabViewModel.cs" />
     <Compile Include="ViewModels\Tabs\TriangleCalculationTabViewModel.cs" />
+    <Compile Include="View\Tabs\MainCalculatorTabView.xaml.cs">
+      <DependentUpon>MainCalculatorTabView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Tabs\MainTabView.xaml.cs">
       <DependentUpon>MainTabView.xaml</DependentUpon>
     </Compile>
@@ -91,6 +95,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MetroButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Tabs\MainCalculatorTabView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
