@@ -13,10 +13,8 @@
             <RowDefinition Height="50"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Column="0" Grid.Row="0" Margin="5,5,5,5">
-            
-        </TextBox>
-        <Grid Grid.Row="1" Width="205" Height="165">
+        <TextBlock Grid.Column="0" Grid.Row="0" Margin="5,5,5,5" Text="{Binding Path=Task,Mode=OneWay}" Name="txtblTask"/>
+            <Grid Grid.Row="1" Width="205" Height="165">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="5"/>
                 <ColumnDefinition Width="35"/>
@@ -44,23 +42,23 @@
             <Button Grid.Column="9" Grid.Row="7" Name="btnEqual" Content="="/>
             <Button Grid.Column="7" Grid.Row="7" Name="btnAns" Content="Ans"/>
             <Button Grid.Column="5" Grid.Row="7" Name="btnExp" Content="EXP"/>
-            <Button Grid.Column="3" Grid.Row="7" Name="btnPoint" Content="."/>
-            <Button Grid.Column="1" Grid.Row="7" Name="btn0" Content="0"/>
-            <Button Grid.Column="9" Grid.Row="5" Name="btnMinus" Content="-"/>
-            <Button Grid.Column="7" Grid.Row="5" Name="btnPlus" Content="+"/>
-            <Button Grid.Column="5" Grid.Row="5" Name="btn3" Content="3"/>
-            <Button Grid.Column="3" Grid.Row="5" Name="btn2" Content="2"/>
-            <Button Grid.Column="1" Grid.Row="5" Name="btn1" Content="1"/>
-            <Button Grid.Column="9" Grid.Row="3" Name="btnDivide" Content="/"/>
-            <Button Grid.Column="7" Grid.Row="3" Name="btnMultiply" Content="*"/>
-            <Button Grid.Column="5" Grid.Row="3" Name="btn6" Content="6"/>
-            <Button Grid.Column="3" Grid.Row="3" Name="btn5" Content="5"/>
-            <Button Grid.Column="1" Grid.Row="3" Name="btn4" Content="4"/>
+            <Button Grid.Column="3" Grid.Row="7" Name="btnPoint" Content="." Command="{Binding Path=InputCommand}" CommandParameter="."/>
+            <Button Grid.Column="1" Grid.Row="7" Name="btn0" Content="0" Command="{Binding Path=InputCommand}" CommandParameter="0"/>
+            <Button Grid.Column="9" Grid.Row="5" Name="btnMinus" Content="-" Command="{Binding Path=InputCommand}" CommandParameter="-"/>
+            <Button Grid.Column="7" Grid.Row="5" Name="btnPlus" Content="+" Command="{Binding Path=InputCommand}" CommandParameter="+"/>
+            <Button Grid.Column="5" Grid.Row="5" Name="btn3" Content="3" Command="{Binding Path=InputCommand}" CommandParameter="3"/>
+            <Button Grid.Column="3" Grid.Row="5" Name="btn2" Content="2" Command="{Binding Path=InputCommand}" CommandParameter="2"/>
+            <Button Grid.Column="1" Grid.Row="5" Name="btn1" Content="1" Command="{Binding Path=InputCommand}" CommandParameter="1"/>
+            <Button Grid.Column="9" Grid.Row="3" Name="btnDivide" Content="/" Command="{Binding Path=InputCommand}" CommandParameter="/"/>
+            <Button Grid.Column="7" Grid.Row="3" Name="btnMultiply" Content="*" Command="{Binding Path=InputCommand}" CommandParameter="*"/>
+            <Button Grid.Column="5" Grid.Row="3" Name="btn6" Content="6" Command="{Binding Path=InputCommand}" CommandParameter="6"/>
+            <Button Grid.Column="3" Grid.Row="3" Name="btn5" Content="5" Command="{Binding Path=InputCommand}" CommandParameter="5"/>
+            <Button Grid.Column="1" Grid.Row="3" Name="btn4" Content="4" Command="{Binding Path=InputCommand}" CommandParameter="4"/>
             <Button Grid.Column="9" Grid.Row="1" Name="btnAC" Content="AC"/>
             <Button Grid.Column="7" Grid.Row="1" Name="btnDel" Content="DEL"/>
-            <Button Grid.Column="5" Grid.Row="1" Name="btn9" Content="9"/> 
-            <Button Grid.Column="3" Grid.Row="1" Name="btn8" Content="8"/>
-            <Button Grid.Column="1" Grid.Row="1" Name="btn7" Content="7"/>
+            <Button Grid.Column="5" Grid.Row="1" Name="btn9" Content="9" Command="{Binding Path=InputCommand}" CommandParameter="9"/> 
+            <Button Grid.Column="3" Grid.Row="1" Name="btn8" Content="8" Command="{Binding Path=InputCommand}" CommandParameter="8"/>
+            <Button Grid.Column="1" Grid.Row="1" Name="btn7" Content="7" Command="{Binding Path=InputCommand}" CommandParameter="7"/>
         </Grid>
     </Grid>
 </UserControl>
