@@ -1,4 +1,5 @@
-﻿using MathematicsAssistant.GUI.Helper;
+﻿using MathematicsAssistant.Business;
+using MathematicsAssistant.GUI.Helper;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,20 @@ namespace MathematicsAssistant.GUI.ViewModels
             }
         }
 
+        private String m_Solution;
+        public String Solution
+        {
+            get { return m_Solution; }
+            set
+            {
+                if (m_Solution != value)
+                {
+                    m_Solution = value;
+                    onPropertyChanged("Solution");
+                }
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -39,6 +54,14 @@ namespace MathematicsAssistant.GUI.ViewModels
             Task = m_Task + Input;
         }
 
+        public ICommand SolutionCommand { get; private set; }
+        private void onSolutionCommandExecuted(Object parameter)
+        {
+            Calculation TaskCalculation = new Calculation(Task);
+            Solution = TaskCalculation.Solution;
+        }
+
+
         #endregion
 
         #region Constructor
@@ -46,6 +69,7 @@ namespace MathematicsAssistant.GUI.ViewModels
         {
             base.Name = "Main Calculator";
             InputCommand = new RelayCommand(onInputCommandExecuted);
+            SolutionCommand = new RelayCommand(onSolutionCommandExecuted);
         }
         #endregion
     }

@@ -39,7 +39,7 @@
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="5"/>
             </Grid.RowDefinitions>
-            <Button Grid.Column="9" Grid.Row="7" Name="btnEqual" Content="="/>
+            <Button Grid.Column="9" Grid.Row="7" Name="btnEqual" Content="=" Command="{Binding Path=SolutionCommand}"/>
             <Button Grid.Column="7" Grid.Row="7" Name="btnAns" Content="Ans"/>
             <Button Grid.Column="5" Grid.Row="7" Name="btnExp" Content="EXP"/>
             <Button Grid.Column="3" Grid.Row="7" Name="btnPoint" Content="." Command="{Binding Path=InputCommand}" CommandParameter="."/>
